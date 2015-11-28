@@ -4,16 +4,22 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AllLengths	main.cpp	/^void Graph::AllLengths(const int n)$/;"	f	class:Graph
 Graph	main.cpp	/^    Graph(const int n = 0) { $/;"	f	class:Graph
 Graph	main.cpp	/^class Graph$/;"	c	file:
 ShortestPath	main.cpp	/^void Graph::ShortestPath(const int v)$/;"	f	class:Graph
+a	main.cpp	/^    int **a;           \/\/ 이차원 배열$/;"	m	class:Graph	file:
 choose	main.cpp	/^int Graph::choose(const int n)$/;"	f	class:Graph
 dist	main.cpp	/^    int *dist;              \/\/ 일차원 배열$/;"	m	class:Graph	file:
+get_n_size	main.cpp	/^    int get_n_size(void) {$/;"	f	class:Graph
 insert	main.cpp	/^int Graph::insert(int x, int y, int data) $/;"	f	class:Graph
 length	main.cpp	/^    int **length;           \/\/ 이차원 배열$/;"	m	class:Graph	file:
 main	main.cpp	/^int main(int argc, const char *argv[])$/;"	f
 n	main.cpp	/^    int n;                  \/\/ 정점의 수$/;"	m	class:Graph	file:
-nmax	main.cpp	23;"	d	file:
+nmax	main.cpp	24;"	d	file:
+path	main.cpp	/^    int *path;$/;"	m	class:Graph	file:
+print_a	main.cpp	/^void Graph::print_a(void) $/;"	f	class:Graph
 print_array	main.cpp	/^void Graph::print_array(void) $/;"	f	class:Graph
 print_dist	main.cpp	/^void Graph::print_dist(void)$/;"	f	class:Graph
+read_array_file	main.cpp	/^int Graph::read_array_file(char *path, int x)$/;"	f	class:Graph
 s	main.cpp	/^    bool *s;                \/\/ 일차원 배열$/;"	m	class:Graph	file:
