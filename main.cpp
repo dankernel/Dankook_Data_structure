@@ -76,8 +76,8 @@ class Graph
     int read_array_file(char *path, int x);
 
     /* Path */
-    void AllLengths(const int n);
-    void print_a(void);
+    void AllLengths(const int n); 
+    void print_a(int);
 };
 
 /* 
@@ -107,33 +107,27 @@ void Graph::print_array(void)
 
 };
 
-void Graph::print_a(void) 
+void Graph::print_a(int v) 
 {
   int i, j, n = this->n;
 
-  cout << "===== PRINT ===== \n";
+  cout << "===== ALL PATH ===== \n";
   for (i = 0; i < n; i++) {
     for (j = 0; j < n; j++) {
       printf("%8d", a[i][j]);
     }
     cout << "\n";
   }
-  cout << "===== PRINT ===== \n";
 
-
-  cout << " ==== Path ==== \n";
+  cout << "===== PATH ===== \n";
 
   for (int i = 0; i < n; i++) {
-    cout << "==" << i << "\n";
-
-    // Print path
+    cout << i << "PATH : ";
     for (int j = i; j != 0; j = path[j])
-      printf("%d \n", j);
-  }
+      printf("<== %d ", j);
 
-  cout << " ==== Path array ==== \n";
-    for (int i = 0; i < n; i++)
-      printf("%d \n", path[i]);
+    printf("<== %d \n", v);
+  }
 
 
 };
@@ -313,13 +307,11 @@ int main(int argc, const char *argv[])
   /* Run */
   graph->print_array();
   
-  cout << " ==== Path2 ==== \n";
   graph->ShortestPath(start_point);
   graph->print_dist();
 
-  cout << " ==== Path1 ==== \n";
   graph->AllLengths(graph->get_n_size());
-  graph->print_a();
+  graph->print_a(start_point);
  
   /* End */
   cout << "END!! \n";

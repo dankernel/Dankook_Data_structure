@@ -18,7 +18,7 @@ main	main.cpp	/^int main(int argc, const char *argv[])$/;"	f
 n	main.cpp	/^    int n;                  \/\/ 정점의 수$/;"	m	class:Graph	file:
 nmax	main.cpp	24;"	d	file:
 path	main.cpp	/^    int *path;$/;"	m	class:Graph	file:
-print_a	main.cpp	/^void Graph::print_a(void) $/;"	f	class:Graph
+print_a	main.cpp	/^void Graph::print_a(int v) $/;"	f	class:Graph
 print_array	main.cpp	/^void Graph::print_array(void) $/;"	f	class:Graph
 print_dist	main.cpp	/^void Graph::print_dist(void)$/;"	f	class:Graph
 read_array_file	main.cpp	/^int Graph::read_array_file(char *path, int x)$/;"	f	class:Graph
