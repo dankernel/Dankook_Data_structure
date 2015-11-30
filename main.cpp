@@ -121,12 +121,21 @@ void Graph::print_a(int v)
 
   cout << "===== PATH ===== \n";
 
+  int tmp[1024];
   for (int i = 0; i < n; i++) {
-    cout << i << "PATH : ";
-    for (int j = i; j != 0; j = path[j])
-      printf("<== %d ", j);
+    cout << i << " PATH : ";
+    int n = 0;
+    for (int j = i; j != 0; j = path[j]) {
+      // printf("<== %d ", j);
+      tmp[n++] = j;
+    }
 
-    printf("<== %d \n", v);
+    printf("%d ", v);
+    while (n)
+      printf("=> %d ", tmp[--n]);
+
+    cout << "\n";
+
   }
 
 
@@ -284,25 +293,7 @@ int main(int argc, const char *argv[])
   // cin >> line;
   graph = new Graph(point);
 
-  graph->read_array_file("array.arr", graph->get_n_size());
-
-  /*  
-  // Input araay
-  for (i = 0; i < line; i++) {
-    int x, y, data;
-    cin >> x >> y >> data;
-    graph->insert(x, y, data);
-    printf("array[%d][%d] : %d \n", x, y, data);
-  }
-
-  // Input start point
-  cout << "Start point : ";
-  cin >> start_point;
-  if (start_point < 0 || graph->get_n_size() < start_point) {
-    cout << "Start point error!";
-    return -1;
-  }
-  */
+  graph->read_array_file("array3.arr", graph->get_n_size());
 
   /* Run */
   graph->print_array();
